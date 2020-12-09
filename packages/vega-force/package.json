@@ -1,5 +1,5 @@
 {
-  "name": "@datatitian/vega-force",
+  "name": "vega-force",
   "version": "4.2.0",
   "description": "Force simulation transform for Vega dataflows.",
   "keywords": [
