@@ -1,5 +1,5 @@
 {
-  "name": "vega",
+  "name": "@datatitian/vega",
   "version": "5.17.0",
   "description": "The Vega visualization grammar.",
   "keywords": [
@@ -25,9 +25,7 @@
     "build": "rollup -c --config-core --config-bundle --config-ie",
     "postbuild": "node schema-copy",
     "pretest": "yarn build --config-test",
-    "test": "TZ=America/Los_Angeles tape 'test/**/*-test.js'",
-    "prepublishOnly": "yarn test && yarn build",
-    "postpublish": "./schema-deploy.sh"
+    "test": "TZ=America/Los_Angeles tape 'test/**/*-test.js'"
   },
   "dependencies": {
     "vega-crossfilter": "~4.0.5",
