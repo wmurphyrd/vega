@@ -14,11 +14,11 @@
   "repository": "vega/vega",
   "scripts": {
     "prebuild": "rimraf build",
-    "build": "rollup -c --config-transform",
+    "build": "rollup -c --config-transform && yarn build:worker",
     "build:worker": "rollup -p @rollup/plugin-node-resolve -f umd -n vega.transforms -o build/vega-force-worker.js -- index-worker.js",
     "pretest": "yarn build --config-test",
     "test": "tape 'test/**/*-test.js'",
-    "prepublishOnly": "yarn test && yarn build"
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "d3-force": "^2.1.1",
